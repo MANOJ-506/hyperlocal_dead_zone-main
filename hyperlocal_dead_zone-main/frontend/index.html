@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Crowdsourced Mobile Network Dead Zone Locator. Share location, report signal drops, no-signal zones, and slow internet to notify operators.">
+  <title>Hyperlocal Dead Zone Locator - Find & Report Mobile Network Signal Issues</title>
+  
+  <!-- CSS Stylesheets -->
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/navbar.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/home.css">
+  <link rel="stylesheet" href="css/cards.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <div id="navbar-placeholder"></div>
+
+  <!-- Main Content -->
+  <main>
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="container hero-content">
+        <div class="hero-tag">
+          <span>📡</span> Hyperlocal Network Tracker
+        </div>
+        <h1 class="hero-title">
+          Find and Report <br>
+          Mobile Network Dead Zones
+        </h1>
+        <p class="hero-desc">
+          Empower your community by reporting areas with weak signals, call drops, slow internet, or complete network blackouts. Together, we can map dead zones and drive connectivity improvements.
+        </p>
+        <div class="hero-btns">
+          <a href="report.html" class="btn btn-primary" id="btn-hero-report">
+            <span>Report Network Issue</span>
+          </a>
+          <a href="map.html" class="btn btn-secondary" id="btn-hero-map">
+            <span>View Live Map</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="section-padding">
+      <div class="container">
+        <h2 class="section-title">How It Works</h2>
+        <p class="section-subtitle">Reporting and tracking mobile network drops is simple and community-driven</p>
+        
+        <div class="timeline">
+          <div class="timeline-step">
+            <div class="step-number">1</div>
+            <h3 class="step-title">Share Location</h3>
+            <p class="step-desc">Allow GPS location permission so we can mark the exact coordinates of the connection drop.</p>
+          </div>
+          
+          <div class="timeline-step">
+            <div class="step-number">2</div>
+            <h3 class="step-title">Select Provider</h3>
+            <p class="step-desc">Choose your mobile operator (Airtel, Jio, VI, or BSNL) and choose the issue type.</p>
+          </div>
+          
+          <div class="timeline-step">
+            <div class="step-number">3</div>
+            <h3 class="step-title">Submit Complaint</h3>
+            <p class="step-desc">Add details of the issue (no signal, call drops, slow speed) and submit the form.</p>
+          </div>
+          
+          <div class="timeline-step">
+            <div class="step-number">4</div>
+            <h3 class="step-title">View Live Map</h3>
+            <p class="step-desc">See the issue visualized on our map immediately. Overlapping reports trigger telecom notifications.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Use This Section (Features) -->
+    <section class="section-padding" style="background-color: var(--bg-tertiary); border-top: 1px solid var(--border-color);">
+      <div class="container">
+        <h2 class="section-title">Why Use This Platform?</h2>
+        <p class="section-subtitle">Features that make dead zone tracking effective</p>
+        
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="feature-icon-wrapper">👥</div>
+            <h3 class="feature-title">Community Driven</h3>
+            <p class="feature-desc">Leverages the power of crowd-sourced reports to verify actual coverage gaps rather than relying on coverage maps.</p>
+          </div>
+          
+          <div class="feature-card">
+            <div class="feature-icon-wrapper">🗺️</div>
+            <h3 class="feature-title">Live Map</h3>
+            <p class="feature-desc">Visualizes real-time reports instantly, allowing residents to check signal patterns before moving or purchasing a connection.</p>
+          </div>
+          
+          <div class="feature-card">
+            <div class="feature-icon-wrapper">⚡</div>
+            <h3 class="feature-title">Easy Reporting</h3>
+            <p class="feature-desc">One-click GPS capture and quick selectors make submitting a detailed signal report take less than 10 seconds.</p>
+          </div>
+          
+          <div class="feature-card">
+            <div class="feature-icon-wrapper">🔓</div>
+            <h3 class="feature-title">Open Source</h3>
+            <p class="feature-desc">Independent and transparent dataset. Reports are shared openly to encourage telecom providers to optimize local towers.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section class="cta">
+      <div class="container">
+        <div class="cta-panel">
+          <h2 class="cta-title">Facing Signal Drops Right Now?</h2>
+          <p class="cta-desc">Help us map the location. Turn on your GPS, select your carrier, and pin the issue to the public map.</p>
+          <a href="report.html" class="btn btn-primary" id="btn-cta-report">
+            <span>Report Dead Zone</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <div id="footer-placeholder"></div>
+
+  <!-- Scripts -->
+  <script type="module" src="js/home.js"></script>
+</body>
+</html>

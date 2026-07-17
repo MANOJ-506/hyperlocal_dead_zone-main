@@ -1,0 +1,8 @@
+{
+  "name": "hyperlocal-dead-zone-frontend",
+  "version": "1.0.0",
+  "description": "Frontend UI for Hyperlocal Dead Zone Locator",
+  "scripts": {
+    "dev": "npx -y live-server"
+  }
+}

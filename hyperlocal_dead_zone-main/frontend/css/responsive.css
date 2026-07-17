@@ -1,0 +1,27 @@
+/* Responsive layout utility adjustments */
+@media (max-width: 1024px) {
+  :root {
+    --radius-lg: 20px;
+    --radius-xl: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .section-padding {
+    padding: 60px 0;
+  }
+  
+  .glass-panel {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  :root {
+    font-size: 14px;
+  }
+  
+  .container {
+    padding: 0 16px;
+  }
+}

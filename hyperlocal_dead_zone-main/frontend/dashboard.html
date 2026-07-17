@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="View reported dead zone complaints logs, telecom carrier signal gaps, and trigger threshold statuses.">
+  <title>Admin Dashboard - Hyperlocal Dead Zone Locator</title>
+  
+  <!-- CSS Stylesheets -->
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/navbar.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/dashboard.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <div id="navbar-placeholder"></div>
+
+  <!-- Dashboard Main Panel -->
+  <main class="dashboard-container">
+    <div class="dashboard-header">
+      <h1 class="dashboard-title">Operational Dashboard</h1>
+      <p class="dashboard-subtitle">Monitor registered network issues and carrier response thresholds.</p>
+    </div>
+
+    <!-- Overview Stat Cards -->
+    <div class="dashboard-stats">
+      <div class="dashboard-stat-card">
+        <div class="dashboard-stat-icon">📄</div>
+        <div class="dashboard-stat-info">
+          <span class="dashboard-stat-num" id="stat-total-reports">0</span>
+          <span class="dashboard-stat-label">Total Reports</span>
+        </div>
+      </div>
+      
+      <div class="dashboard-stat-card">
+        <div class="dashboard-stat-icon">🚨</div>
+        <div class="dashboard-stat-info">
+          <span class="dashboard-stat-num" id="stat-dead-zones">0</span>
+          <span class="dashboard-stat-label">Dead Zones</span>
+        </div>
+      </div>
+
+      <div class="dashboard-stat-card">
+        <div class="dashboard-stat-icon">✉️</div>
+        <div class="dashboard-stat-info">
+          <span class="dashboard-stat-num" id="stat-alerts-sent">0</span>
+          <span class="dashboard-stat-label">Alerts Triggered</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Details Grid -->
+    <div class="dashboard-grid">
+      
+      <!-- Left Column: Distributions -->
+      <div style="display: flex; flex-direction: column; gap: 24px;">
+        <!-- Provider distribution bar-chart card -->
+        <div class="breakdown-card">
+          <h2 class="breakdown-title">Reports by Operator</h2>
+          <div id="provider-breakdown-container">
+            <!-- Dynamic elements will be loaded here -->
+          </div>
+        </div>
+
+        <!-- Issue distribution bar-chart card -->
+        <div class="breakdown-card">
+          <h2 class="breakdown-title">Reports by Issue Type</h2>
+          <div id="issue-breakdown-container">
+            <!-- Dynamic elements will be loaded here -->
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Column: Recent Reports Table Logs -->
+      <div class="table-card">
+        <h2 class="breakdown-title" style="border-bottom: none; margin-bottom: 12px;">Recent Incident Log</h2>
+        <div class="table-wrapper">
+          <table class="dashboard-table">
+            <thead>
+              <tr>
+                <th>Operator</th>
+                <th>Issue Type</th>
+                <th>Coordinates</th>
+                <th>Time Reported</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody id="recent-logs-tbody">
+              <!-- Logs loaded via JS -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <div id="footer-placeholder"></div>
+
+  <!-- Scripts -->
+  <script type="module" src="js/dashboard.js"></script>
+</body>
+</html>

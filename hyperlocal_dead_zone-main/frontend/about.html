@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Learn about the Hyperlocal Dead Zone Locator, project objectives, and how we map network signal gaps.">
+  <title>About Project - Hyperlocal Dead Zone Locator</title>
+  
+  <!-- CSS Stylesheets -->
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/navbar.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  
+  <style>
+    .about-container {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 0 24px;
+    }
+    .about-header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    .about-title {
+      font-size: 2.25rem;
+      font-weight: 800;
+      margin-bottom: 12px;
+      color: var(--accent-color);
+    }
+    .about-subtitle {
+      font-size: 1.05rem;
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+    .about-section {
+      margin-bottom: 32px;
+      background-color: var(--bg-secondary);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      padding: 32px;
+      box-shadow: var(--shadow-sm);
+    }
+    .about-section h2 {
+      font-size: 1.35rem;
+      font-weight: 700;
+      margin-bottom: 16px;
+      padding-bottom: 8px;
+      border-bottom: 2px solid var(--border-color);
+      color: var(--accent-color);
+    }
+    .about-section p {
+      font-size: 0.95rem;
+      color: var(--text-secondary);
+      line-height: 1.6;
+      margin-bottom: 16px;
+    }
+    .about-section p:last-child {
+      margin-bottom: 0;
+    }
+    .about-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-top: 16px;
+    }
+    .about-list li {
+      font-size: 0.95rem;
+      color: var(--text-secondary);
+      line-height: 1.5;
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+    }
+    .about-list li::before {
+      content: "✓";
+      color: var(--primary);
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <div id="navbar-placeholder"></div>
+
+  <!-- About Content -->
+  <main class="about-container">
+    <div class="about-header">
+      <h1 class="about-title">About the Locator</h1>
+      <p class="about-subtitle">Understanding the mission to map, visualize, and report mobile coverage gaps.</p>
+    </div>
+
+    <!-- Section 1: Overview -->
+    <div class="about-section">
+      <h2>Project Overview</h2>
+      <p>
+        The <strong>Hyperlocal Dead Zone Mobile Network Locator</strong> is a community-driven web platform designed to crowdsource reports of poor mobile network coverage. When users encounter connection issues, call drops, or slow speeds, they can pin their exact location to a public map.
+      </p>
+      <p>
+        By analyzing overlapping signal drop complaints, the system identifies persistent local coverage gaps and automatically compiles incident summaries for telecom providers, encouraging them to optimize cellular tower parameters in affected neighborhoods.
+      </p>
+    </div>
+
+    <!-- Section 2: Problem Statement -->
+    <div class="about-section">
+      <h2>Problem Statement</h2>
+      <p>
+        Millions of mobile subscribers face daily connectivity problems such as call dropouts, weak signals indoors, or complete data connection blackouts. However, individual reports are rarely sufficient for telecom NOCs (Network Operations Centers) to allocate resources for optimization.
+      </p>
+      <p>
+        Existing reporting systems are manual, slow, and lack geographic context. This project solves this limitation by providing a live, public coverage map and automating email alerts when critical clusters of reports accumulate in a single area.
+      </p>
+    </div>
+
+    <!-- Section 3: Core Objectives -->
+    <div class="about-section">
+      <h2>Objectives of V1 (MVP)</h2>
+      <ul class="about-list">
+        <li>Provide users with a responsive, single-click interface to share GPS coordinates and specify their carrier.</li>
+        <li>Render a live interactive coverage map demonstrating signal gap markers color-coded by carrier.</li>
+        <li>Establish proximity algorithms that detect clusters of reports (e.g. 3 reports within a 200-meter radius).</li>
+        <li>Automate notifications containing detailed coordinate summaries and carrier information to support teams.</li>
+      </ul>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <div id="footer-placeholder"></div>
+
+  <!-- Scripts -->
+  <script type="module">
+    import { loadComponents } from './js/utils.js';
+    document.addEventListener('DOMContentLoaded', () => {
+      loadComponents('about');
+    });
+  </script>
+</body>
+</html>

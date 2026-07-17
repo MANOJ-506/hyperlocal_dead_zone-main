@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="View live crowdsourced mobile network dead zones map. Filter complaints by telecom provider (Jio, Airtel, VI, BSNL).">
+  <title>Live Map - Hyperlocal Dead Zone Locator</title>
+  
+  <!-- Leaflet CSS (Map Engine) -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+
+  <!-- CSS Stylesheets -->
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/navbar.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/map.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <div id="navbar-placeholder"></div>
+
+  <!-- Map Wrapper -->
+  <div class="map-page-wrapper">
+    <!-- Map Canvas Element -->
+    <div id="map"></div>
+
+    <!-- Floating Filter Sidebar Panel -->
+    <div class="filter-panel">
+      <div>
+        <h3 class="filter-section-title">📡 Network Provider</h3>
+        <select id="filter-provider" class="filter-select">
+          <option value="All">All Providers</option>
+          <option value="Airtel">Airtel Only</option>
+          <option value="Jio">Jio Only</option>
+          <option value="VI">VI Only</option>
+          <option value="BSNL">BSNL Only</option>
+        </select>
+      </div>
+
+      <div>
+        <h3 class="filter-section-title">⚠️ Issue Severity</h3>
+        <select id="filter-issue" class="filter-select">
+          <option value="All">All Issues</option>
+          <option value="No Signal">No Signal</option>
+          <option value="Weak Signal">Weak Signal</option>
+          <option value="Call Drop">Call Drop</option>
+          <option value="Slow Internet">Slow Internet</option>
+        </select>
+      </div>
+
+      <!-- Map Legend Panel -->
+      <div class="legend-panel">
+        <h3 class="filter-section-title" style="font-size: 0.8rem; margin-bottom: 8px;">Legend</h3>
+        <div class="legend-item">
+          <span class="legend-color Airtel"></span>
+          <span>Airtel Complaint</span>
+        </div>
+        <div class="legend-item">
+          <span class="legend-color Jio"></span>
+          <span>Jio Complaint</span>
+        </div>
+        <div class="legend-item">
+          <span class="legend-color VI"></span>
+          <span>VI Complaint</span>
+        </div>
+        <div class="legend-item">
+          <span class="legend-color BSNL"></span>
+          <span>BSNL Complaint</span>
+        </div>
+        <div class="legend-item" style="margin-top: 8px;">
+          <span class="legend-color cluster"></span>
+          <span>Potential Dead Zone (3+ reports)</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer (Visible only below map in mobile view or as normal footer block) -->
+  <div id="footer-placeholder"></div>
+
+  <!-- Leaflet JS (Map Engine) -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+
+  <!-- Scripts -->
+  <script type="module" src="js/map.js"></script>
+</body>
+</html>

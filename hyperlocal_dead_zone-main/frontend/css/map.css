@@ -1,0 +1,234 @@
+/* Live Map Styling - Professional Light Theme */
+
+/* Layout wrapper */
+.map-page-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 64px);
+  position: relative;
+  overflow: hidden;
+}
+
+@media (max-width: 768px) {
+  .map-page-wrapper {
+    height: auto;
+    min-height: calc(100vh - 64px);
+  }
+}
+
+/* Map Canvas Container */
+#map {
+  flex-grow: 1;
+  width: 100%;
+  height: 100%;
+  background-color: var(--bg-tertiary);
+  z-index: 1;
+}
+
+@media (max-width: 768px) {
+  #map {
+    height: 480px;
+  }
+}
+
+/* Floating Filter Sidebar Panel */
+.filter-panel {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 320px;
+  z-index: 10;
+  max-height: calc(100% - 40px);
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-lg);
+  padding: 20px;
+  border-radius: var(--radius-md);
+}
+
+@media (max-width: 768px) {
+  .filter-panel {
+    position: relative;
+    top: 0;
+    right: 0;
+    width: 100%;
+    max-height: none;
+    border-radius: 0;
+    border-left: none;
+    border-right: none;
+    background-color: var(--bg-secondary);
+  }
+}
+
+.filter-section-title {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 12px;
+}
+
+/* Filter controls style */
+.filter-select {
+  width: 100%;
+  padding: 8px 12px;
+  font-size: 0.9rem;
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  color: var(--text-primary);
+  margin-bottom: 16px;
+}
+
+.filter-select:focus {
+  border-color: var(--primary);
+}
+
+.filter-checkbox-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.filter-checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  cursor: pointer;
+  user-select: none;
+}
+
+.filter-checkbox-label input {
+  width: 16px;
+  height: 16px;
+  accent-color: var(--primary);
+}
+
+/* Leaflet Custom Popup styling */
+.custom-popup .leaflet-popup-content-wrapper {
+  background-color: var(--bg-secondary);
+  color: var(--text-primary);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-lg);
+  font-family: var(--font-sans);
+  padding: 4px;
+}
+
+.custom-popup .leaflet-popup-tip {
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+}
+
+.popup-details {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 180px;
+}
+
+.popup-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 6px;
+  margin-bottom: 4px;
+}
+
+.popup-provider {
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.provider-tag {
+  font-size: 0.7rem;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-weight: 600;
+}
+
+.provider-tag.Airtel {
+  background-color: rgba(220, 38, 38, 0.1);
+  color: #dc2626;
+}
+
+.provider-tag.Jio {
+  background-color: rgba(2, 132, 199, 0.1);
+  color: #0284c7;
+}
+
+.provider-tag.VI {
+  background-color: rgba(217, 119, 6, 0.1);
+  color: #d97706;
+}
+
+.provider-tag.BSNL {
+  background-color: rgba(22, 163, 74, 0.1);
+  color: #16a34a;
+}
+
+.popup-issue {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.popup-time {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.popup-comments {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  font-style: italic;
+  margin-top: 4px;
+  border-top: 1px dashed var(--border-color);
+  padding-top: 6px;
+  max-width: 220px;
+  word-wrap: break-word;
+}
+
+/* Legend items */
+.legend-panel {
+  margin-top: 8px;
+  border-top: 1px solid var(--border-color);
+  padding-top: 12px;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  margin-bottom: 6px;
+}
+
+.legend-color {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+.legend-color.Airtel { background-color: #dc2626; }
+.legend-color.Jio { background-color: #0284c7; }
+.legend-color.VI { background-color: #d97706; }
+.legend-color.BSNL { background-color: #16a34a; }
+.legend-color.cluster {
+  background-color: rgba(239, 68, 68, 0.2);
+  border: 1px dashed #dc2626;
+  border-radius: 50%;
+}

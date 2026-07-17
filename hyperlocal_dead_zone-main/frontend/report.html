@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Report a mobile network dead zone or signal drops in your area. Share your GPS location and select Jio, Airtel, VI, or BSNL.">
+  <title>Report Network Complaint - Hyperlocal Dead Zone Locator</title>
+  
+  <!-- CSS Stylesheets -->
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/navbar.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/forms.css">
+  <link rel="stylesheet" href="css/report.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <div id="navbar-placeholder"></div>
+
+  <!-- Main Content -->
+  <main class="container">
+    <div class="report-container">
+      <div class="report-header">
+        <h1 class="report-title">Report Network Dead Zone</h1>
+        <p class="report-desc">Submit a signal drop report to help map coverage issues and notify telecommunications providers.</p>
+      </div>
+
+      <div class="card-panel report-card">
+        <form id="report-form" novalidate>
+          
+          <!-- 1. Network Provider Selection -->
+          <div class="form-group">
+            <label class="form-label">1. Select Mobile Network Operator</label>
+            <div class="radio-grid" id="provider-grid">
+              <label class="radio-card">
+                <input type="radio" name="provider" value="Airtel" required>
+                <div class="radio-card-content">
+                  <span class="radio-card-icon">🔴</span>
+                  <span>Airtel</span>
+                </div>
+              </label>
+              
+              <label class="radio-card">
+                <input type="radio" name="provider" value="Jio" required>
+                <div class="radio-card-content">
+                  <span class="radio-card-icon">🔵</span>
+                  <span>Jio</span>
+                </div>
+              </label>
+              
+              <label class="radio-card">
+                <input type="radio" name="provider" value="VI" required>
+                <div class="radio-card-content">
+                  <span class="radio-card-icon">🟡</span>
+                  <span>VI</span>
+                </div>
+              </label>
+              
+              <label class="radio-card">
+                <input type="radio" name="provider" value="BSNL" required>
+                <div class="radio-card-content">
+                  <span class="radio-card-icon">🟢</span>
+                  <span>BSNL</span>
+                </div>
+              </label>
+            </div>
+          </div>
+
+          <!-- 2. Issue Type Selection -->
+          <div class="form-group">
+            <label class="form-label">2. Select Issue Type</label>
+            <div class="radio-grid" id="issue-grid">
+              <label class="radio-card">
+                <input type="radio" name="issue" value="No Signal" required>
+                <div class="radio-card-content">
+                  <span class="radio-card-icon">🚫</span>
+                  <span>No Signal</span>
+                </div>
+              </label>
+              
+              <label class="radio-card">
+                <input type="radio" name="issue" value="Weak Signal" required>
+                <div class="radio-card-content">
+                  <span class="radio-card-icon">📶</span>
+                  <span>Weak Signal</span>
+                </div>
+              </label>
+              
+              <label class="radio-card">
+                <input type="radio" name="issue" value="Call Drop" required>
+                <div class="radio-card-content">
+                  <span class="radio-card-icon">📞</span>
+                  <span>Call Drop</span>
+                </div>
+              </label>
+              
+              <label class="radio-card">
+                <input type="radio" name="issue" value="Slow Internet" required>
+                <div class="radio-card-content">
+                  <span class="radio-card-icon">⏳</span>
+                  <span>Slow Internet</span>
+                </div>
+              </label>
+            </div>
+          </div>
+
+          <!-- 3. GPS Location Capture -->
+          <div class="form-group">
+            <label class="form-label">3. Device Location (GPS)</label>
+            <div class="location-box">
+              <div class="location-box-header">
+                <div class="location-status" id="location-status">
+                  <span class="status-indicator pending" id="status-indicator"></span>
+                  <span id="status-text">Location permission required</span>
+                </div>
+                <button type="button" class="btn btn-secondary" style="padding: 6px 12px; font-size: 0.8rem;" id="btn-detect-gps">
+                  ⚡ Auto-Detect GPS
+                </button>
+              </div>
+              
+              <div class="coords-grid">
+                <div>
+                  <label class="form-label" style="font-size: 0.75rem; color: var(--text-secondary);">Latitude</label>
+                  <input type="text" id="latitude" class="form-control" placeholder="Not captured" readonly required>
+                </div>
+                <div>
+                  <label class="form-label" style="font-size: 0.75rem; color: var(--text-secondary);">Longitude</label>
+                  <input type="text" id="longitude" class="form-control" placeholder="Not captured" readonly required>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 4. Optional Comments -->
+          <div class="form-group">
+            <label class="form-label" for="comments">4. Additional Details / Comments (Optional)</label>
+            <textarea id="comments" name="comments" class="form-control" rows="3" placeholder="Describe the coverage issue (e.g. happens inside building, specific time, etc.)"></textarea>
+          </div>
+
+          <!-- Submit Button -->
+          <div class="submit-btn-wrapper">
+            <button type="submit" class="btn btn-primary submit-btn" id="btn-submit-report">
+              <span>Submit Report</span>
+            </button>
+          </div>
+
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <div id="footer-placeholder"></div>
+
+  <!-- Scripts -->
+  <script type="module" src="js/report.js"></script>
+</body>
+</html>
